@@ -24,6 +24,27 @@ var reverse = function(x) {
     return (y > (Math.pow(2,31)-1) || y < (Math.pow(-2,31)+1))?0:y;
 };*/
 
+/*var reverse = function(x){
+    const isNegative = x< 0 ? true : false;
+     
+     if (isNegative){
+         x = x *-1;
+     }
+     
+     let num = 0;
+     while(x>0){
+         num = (num * 10) + (x % 10);
+         
+         x = parseInt(x/10);
+     }
+     
+     if(num >= Math.pow(2,31)-1 ||num <= -Math.pow(2,31)){
+         return 0;
+     }
+     
+     return isNegative? num * -1 : num;
+ }*/
+
 var reverse = function(x) {
     let y=x;
     x = Math.abs(x);
@@ -38,3 +59,4 @@ var reverse = function(x) {
     return y>0?num:-num;
     
 }
+
